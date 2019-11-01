@@ -1,0 +1,17 @@
+{
+"meta": {
+		"description": "Initial configs"
+	},
+"configs": {
+		"data_configs": {
+			"catalysts_data_file":"catalysts.csv",
+			"reactions_data_file":"reactions.csv"
+		},
+		"calculations_configs": {
+			"indices":"all_topological"
+		},
+		"output_configs": {
+			"output_file":"output.csv"
+		}
+	}
+}
