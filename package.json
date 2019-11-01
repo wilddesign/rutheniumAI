@@ -1,0 +1,25 @@
+{
+  "name": "ru20",
+  "version": "1.0.0",
+  "description": "Optimization of olefin metathesis catalysts using machine learning tool.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wilddesign/ru20.git"
+  },
+  "keywords": [
+    "olefin",
+    "metathesis",
+    "organometallic",
+    "optimization"
+  ],
+  "author": "Wojciech Nogaś",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilddesign/ru20/issues"
+  },
+  "homepage": "https://github.com/wilddesign/ru20#readme"
+}
