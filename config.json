@@ -4,8 +4,8 @@
 	},
 "configs": {
 		"data_configs": {
-			"catalysts_data_file":"catalysts.csv",
-			"reactions_data_file":"reactions.csv"
+			"catalysts_data_file":"file:///home/wojtek/ru20/catalysts.csv",
+			"reactions_data_file":"file:///home/wojtek/ru20/reactions.csv"
 		},
 		"calculations_configs": {
 			"indices":"all_topological"

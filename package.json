@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/wilddesign/ru20#readme",
   "dependencies": {
+    "@tensorflow/tfjs": "^1.3.1",
     "papaparse": "^5.1.0"
   }
 }
