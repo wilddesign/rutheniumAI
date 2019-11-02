@@ -1,11 +1,10 @@
 
 
 const TF = require('@tensorflow/tfjs');
+const CHEM_CALC_SERVICE = require('./datacalculations/index.js');
 
-
-
-async function loadCsvFile(filename){
-  const csv = TF.data.csv(filename ,{
+async function loadCatalystsFile(filepath){
+  const csv = TF.data.csv(filepath ,{
       hasHeader: true,
       columnConfigs: {
         catalyst_nr: {
@@ -16,15 +15,36 @@ async function loadCsvFile(filename){
         }
       }
     });
-    await csv.forEachAsync(e => console.log(e));
+    return await csv;
+}
+
+async function loadReactionsFile(filepath){
+  const csvFile = TF.data.csv(filepath ,{
+      hasHeader: true,
+      columnConfigs: {
+        reaction_nr: {
+          isLabel: true
+        },
+        catalyst: {
+          isLabel: true
+        }
+      }
+    });
+let csvRawData=[];
+  await csvFile.forEachAsync(e => csvRawData.push(e));
+    console.log(await csvRawData);
 }
 
 
 async function loadData(configs){
   //returns an object containing catalysts and reaction for each catalysts
-
-  const xd = await loadCsvFile(configs.catalysts_data_file);
-return xd;
+  const catalysts = await loadCatalystsFile(configs.data_configs.catalysts_data_file);
+  const reactions = await loadReactionsFile(configs.data_configs.reactions_data_file);
+console.log(await catalysts);
+  let dataObject = {
+    catalysts: await catalysts,
+    reactions: await reactions
+  }
 }
 
 
@@ -86,36 +106,8 @@ await run();
 */
 
 
-
-
-/*
-
-async function loadConfigs() {
-  //load configurations file and returns it
-    let fileHandle = await FS_PROMISES.open('config.json');
-    let configJSON = await fileHandle.readFile();
-    let configs = await JSON.parse(configJSON);
-    return configs;
-};
-
-async function loadDataBase(configObject) {
-  //load the csv file using tf
-
-
-
-  //gets the filename, retrieves the .csv file, parses that to an object and returns it
-  let fileHandle = await FS_PROMISES.open(configObject.catalysts_data_file);
-  let dataCsv = await fileHandle.readFile();
-  return dataCsv;
-//console.log(dataCsv);
-//  let dataObject = await CSV_PARSE.parse(await dataCsv);
-//  console.log(dataObject);
-  //return dataObject;
-  //console.log(dataObject);
-};
-*/
 module.exports = {
 
-  loadData: loadData
+  performBusinessLogic: loadData
 
 }

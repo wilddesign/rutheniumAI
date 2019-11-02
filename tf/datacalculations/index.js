@@ -1,8 +1,10 @@
 
 const MOLECULES = require('molecules.js');
 
-function calculateIndices(){
-  console.log('fuck u');
+function calculateIndices(indices){
+  if (indices == 'all_indices'){
+      console.log('fuck u');
+  }
 };
 
 

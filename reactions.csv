@@ -1,4 +1,4 @@
-# reaction_nr,catalyst,conversion,yield1,yield2,selectivity
+reaction_nr,catalyst,conversion,yield1,yield2,selectivity
 1,ru1,0.57,0.25,0.32,0.93
 2,ru2,0.67,0.44,0.51,0.93
 3,ru3,0.52,0.43,0.48,0.98
