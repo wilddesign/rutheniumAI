@@ -4,7 +4,7 @@ const TF = require('@tensorflow/tfjs');
 const CHEM_CALC_SERVICE = require('./datacalculations/index.js');
 
 async function loadCatalystsFile(filepath){
-  const csv = TF.data.csv(filepath ,{
+  const csvFile = TF.data.csv(filepath ,{
       hasHeader: true,
       columnConfigs: {
         catalyst_nr: {
@@ -15,7 +15,12 @@ async function loadCatalystsFile(filepath){
         }
       }
     });
-    return await csv;
+    await csvFile.forEachAsync(function(catalyst)
+    {
+      catalyst.NHC_data = CHEM_CALC_SERVICE.calculateIndices('all_indices', catalyst.xs.NHC_data);
+      catalyst.alkylidene_data = CHEM_CALC_SERVICE.calculateIndices('all_indices', catalyst.xs.alkylidene_data);
+    });
+    return await csvFile;
 }
 
 async function loadReactionsFile(filepath){
@@ -30,9 +35,14 @@ async function loadReactionsFile(filepath){
         }
       }
     });
-let csvRawData=[];
-  await csvFile.forEachAsync(e => csvRawData.push(e));
-    console.log(await csvRawData);
+
+    let csvRawData=[];
+/*
+    await csvFile.forEachAsync(function(catalyst)
+    {
+      console.log(catalyst);
+    });*/
+  //  console.log(await csvRawData);
 }
 
 
@@ -40,11 +50,16 @@ async function loadData(configs){
   //returns an object containing catalysts and reaction for each catalysts
   const catalysts = await loadCatalystsFile(configs.data_configs.catalysts_data_file);
   const reactions = await loadReactionsFile(configs.data_configs.reactions_data_file);
-console.log(await catalysts);
+  //console.log(await catalysts);
   let dataObject = {
     catalysts: await catalysts,
     reactions: await reactions
   }
+  console.log(await dataObject);
+}
+
+async function businessLogic(){
+  //load data, calculate indices, build model, train, test
 }
 
 

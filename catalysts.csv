@@ -1,4 +1,4 @@
-catalyst_nr,catalyst_name,is_phosphine,chloride_or_iodide,NHC_smiles,alkylidene_smiles
+catalyst_nr,catalyst_name,is_phosphine,chloride_or_iodide,NHC_data,alkylidene_data
 1,ru1,1,1,,CC1=CC=CC=C1
 2,ru2,1,1,,C1(C(C2=CC=CC=C2)=CC3)=C3C=CC=C1
 3,ru3,1,1,,CC1=CC=CC=C1OC(C)C
