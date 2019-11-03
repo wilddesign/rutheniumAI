@@ -8,7 +8,7 @@ const TF_SERVICE = require('./tf/index.js');
     const CONFIGS = await LOAD_CONFIGS.loadConfigs();
 
   //perform the business logic with the tf module and return the results
-    let output = TF_SERVICE.performBusinessLogic(await CONFIGS.configs);
+    let output = TF_SERVICE.main(await CONFIGS.configs);
   //load data according to configurations file
   //  let data = TF_SERVICE.loadData(await CONFIGS.configs.data_configs);
   //prepare tensors for the neural network

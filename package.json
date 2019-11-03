@@ -1,5 +1,5 @@
 {
-  "name": "ru20",
+  "name": "RutheniumAI",
   "version": "1.0.0",
   "description": "Optimization of olefin metathesis catalysts using machine learning tool.",
   "main": "index.js",

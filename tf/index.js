@@ -15,11 +15,6 @@ async function loadCatalystsFile(filepath){
         }
       }
     });
-    await csvFile.forEachAsync(function(catalyst)
-    {
-      catalyst.NHC_data = CHEM_CALC_SERVICE.calculateIndices('all_indices', catalyst.xs.NHC_data);
-      catalyst.alkylidene_data = CHEM_CALC_SERVICE.calculateIndices('all_indices', catalyst.xs.alkylidene_data);
-    });
     return await csvFile;
 }
 
@@ -35,33 +30,68 @@ async function loadReactionsFile(filepath){
         }
       }
     });
-
-    let csvRawData=[];
-/*
-    await csvFile.forEachAsync(function(catalyst)
-    {
-      console.log(catalyst);
-    });*/
-  //  console.log(await csvRawData);
+    return await csvFile;
 }
 
 
 async function loadData(configs){
   //returns an object containing catalysts and reaction for each catalysts
-  const catalysts = await loadCatalystsFile(configs.data_configs.catalysts_data_file);
-  const reactions = await loadReactionsFile(configs.data_configs.reactions_data_file);
-  //console.log(await catalysts);
+  const catalysts = loadCatalystsFile(configs.data_configs.catalysts_data_file);
+  const reactions = loadReactionsFile(configs.data_configs.reactions_data_file);
+
   let dataObject = {
     catalysts: await catalysts,
     reactions: await reactions
   }
-  console.log(await dataObject);
+  return dataObject;
 }
 
-async function businessLogic(){
+function calculateIndices(data){
+
+  data.catalysts.forEachAsync(function(catalyst)
+  {
+    catalyst.xs.NHC_data = CHEM_CALC_SERVICE.calculateIndices('all_indices', catalyst.xs.NHC_data);
+    catalyst.xs.alkylidene_data = CHEM_CALC_SERVICE.calculateIndices('all_indices', catalyst.xs.alkylidene_data);
+  });
+
+  return data;
+  //console.log(await data.catalysts);
+}
+
+async function buildTensor(input, configs){
+  //define a tensor, in which xs is an array of indices and ys are reaction data for that catalyst
+  let outputTensor = input.catalysts.forEachAsync(function(catalyst){
+    //calculate indices
+    catalyst.xs.NHC_data = CHEM_CALC_SERVICE.calculateIndices(configs.calculations_configs.indices, catalyst.xs.NHC_data);
+    catalyst.xs.alkylidene_data = CHEM_CALC_SERVICE.calculateIndices(configs.calculations_configs.indices, catalyst.xs.alkylidene_data);
+    //put this as input to result array
+
+    input.reactions.forEachAsync(function(reaction){
+      if (catalyst.ys.catalyst_name == reaction.ys.catalyst){
+
+        let tensorEntry = {
+          xs: [catalyst.xs.NHC_data, catalyst.xs.alkylidene_data],
+          ys: reaction.xs
+        };
+
+      }
+    });
+  });
+        console.log(await outputTensor);
+}
+
+function createModel(){
+  //create model from layers and compile it
+}
+
+
+async function main(configs){
   //load data, calculate indices, build model, train, test
-}
+  let data = loadData(configs);
+  let dataWithCalculatedIndices = buildTensor(await data, await configs);
+  //let tensor = buildTensor(await dataWithCalculatedIndices);
 
+}
 
 /*
 
@@ -123,6 +153,6 @@ await run();
 
 module.exports = {
 
-  performBusinessLogic: loadData
+  main: main
 
 }

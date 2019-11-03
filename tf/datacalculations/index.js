@@ -4,7 +4,7 @@ const MOLECULES = require('molecules.js');
 function calculateIndices(indices, moleculeInputSmiles){
   let indicesObject = {};
 
-  if (indices == 'all_indices' && moleculeInputSmiles){
+  if (indices == 'all_topological' && moleculeInputSmiles){
 
       let molecule = MOLECULES.load.smiles(moleculeInputSmiles);
 
@@ -31,7 +31,7 @@ function calculateIndices(indices, moleculeInputSmiles){
         randicIndex: randicIndex
       }
   }
-
+  
   return indicesObject;
 };
 
