@@ -4,8 +4,8 @@
 	},
 "configs": {
 		"data_configs": {
-			"catalysts_data_file":"file://./catalysts.csv",
-			"reactions_data_file":"file://./reactions.csv"
+			"catalysts_data_file":"catalysts.json",
+			"reactions_data_file":"reactions.json"
 		},
 		"calculations_configs": {
 			"indices":"all_topological"

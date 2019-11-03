@@ -1,0 +1,458 @@
+[
+  {
+    "catalyst_nr": 1,
+    "catalyst_name": "ru1",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "",
+    "alkylidene_data": "CC1=CC=CC=C1"
+  },
+  {
+    "catalyst_nr": 2,
+    "catalyst_name": "ru2",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "",
+    "alkylidene_data": "C1(C(C2=CC=CC=C2)=CC3)=C3C=CC=C1"
+  },
+  {
+    "catalyst_nr": 3,
+    "catalyst_name": "ru3",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 5,
+    "catalyst_name": "ru5",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 6,
+    "catalyst_name": "ru6",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 0,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 7,
+    "catalyst_name": "ru7",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC([N+]([O-])=O)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 8,
+    "catalyst_name": "ru8",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 0,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC([N+]([O-])=O)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 9,
+    "catalyst_name": "ru9",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC(NC(C(F)(F)F)=O)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 10,
+    "catalyst_name": "ru10",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 0,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC(NC(C(F)(F)F)=O)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 11,
+    "catalyst_name": "ru11",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC(NC(C(C)(C)C)=O)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 12,
+    "catalyst_name": "ru12",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC(NS(=O)(N(C)C)=O)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 13,
+    "catalyst_name": "ru13",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C)C(C=CC=C1C(C)C)=C1N2CCN(C3=C(C(C)C)C=CC=C3C(C)C)C2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 14,
+    "catalyst_name": "ru14",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 0,
+    "NHC_data": "CC(C)C(C=CC=C1C(C)C)=C1N2CCN(C3=C(C(C)C)C=CC=C3C(C)C)C2",
+    "alkylidene_data": "CC1=CC([N+]([O-])=O)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 15,
+    "catalyst_name": "ru15",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C)C(C=CC=C1C(C)C)=C1N2CCN(C3=C(C(C)C)C=CC=C3C(C)C)C2",
+    "alkylidene_data": "CC1=CC(OC)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 16,
+    "catalyst_name": "ru16",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C)C(C=CC=C1C(C)C)=C1N2CCN(C3=C(C(C)C)C=CC=C3C(C)C)C2",
+    "alkylidene_data": "CC1=CC(NC(C(F)(F)F)=O)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 17,
+    "catalyst_name": "ru17",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 0,
+    "NHC_data": "CC(C)C(C=CC=C1C(C)C)=C1N2CCN(C3=C(C(C)C)C=CC=C3C(C)C)C2",
+    "alkylidene_data": "CC1=CC(NC(C(F)(F)F)=O)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 18,
+    "catalyst_name": "ru18",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC1(C)CC(C)(C)N(C2=C(CC)C=CC=C2CC)C1",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 19,
+    "catalyst_name": "ru19",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 0,
+    "NHC_data": "CC1(C)CC(C)(C)N(C2=C(CC)C=CC=C2CC)C1",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 20,
+    "catalyst_name": "ru20",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC1(C)N(C2=C(C(C)C)C=CC=C2C(C)C)CC3(CCCCC3)C1",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 21,
+    "catalyst_name": "ru21",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC=CC=C1OC2CCCC2"
+  },
+  {
+    "catalyst_nr": 22,
+    "catalyst_name": "ru22",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC=CC=C1OC2CCCCC2"
+  },
+  {
+    "catalyst_nr": 23,
+    "catalyst_name": "ru23",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C)C(C=CC=C1C(C)C)=C1N2CCN(C3=C(C(C)C)C=CC=C3C(C)C)C2",
+    "alkylidene_data": "CC1=C(OC(C(N(C)OC)=O)C)C=CC=C1"
+  },
+  {
+    "catalyst_nr": 24,
+    "catalyst_name": "ru24",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C)C(C=CC=C1C(C)C)=C1N2CCN(C3=C(C(C)C)C=CC=C3C(C)C)C2",
+    "alkylidene_data": "CC1=C(OC(C(N(C)OC)=O)C)C=CC(C)=C1"
+  },
+  {
+    "catalyst_nr": 25,
+    "catalyst_name": "ru25",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C)C(C=CC=C1C(C)C)=C1N2CCN(C3=C(C(C)C)C=CC=C3C(C)C)C2",
+    "alkylidene_data": "CC1=C(OC(C(N(C)OC)=O)C)C=CC(OC)=C1"
+  },
+  {
+    "catalyst_nr": 26,
+    "catalyst_name": "ru26",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "C1(C2=CC=CC=C2)=NN(C3=CC=CC=C3)CN1C4=CC=CC=C4",
+    "alkylidene_data": ""
+  },
+  {
+    "catalyst_nr": 27,
+    "catalyst_name": "ru27",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC1=CC(C)=CC(C)=C1N2CN3C(COC4C3C5=C(C=CC=C5)C4)=N2",
+    "alkylidene_data": ""
+  },
+  {
+    "catalyst_nr": 31,
+    "catalyst_name": "ru31",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC=CS1"
+  },
+  {
+    "catalyst_nr": 32,
+    "catalyst_name": "ru32",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=C(S(C2=CC=CC=C2)=O)C=CC=C1"
+  },
+  {
+    "catalyst_nr": 33,
+    "catalyst_name": "ru33",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "C[P+](C1CCCCC1)(C2CCCCC2)C3CCCCC3"
+  },
+  {
+    "catalyst_nr": 35,
+    "catalyst_name": "ru35",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=C(CN(C)C)C=CC=C1"
+  },
+  {
+    "catalyst_nr": 37,
+    "catalyst_name": "ru37",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=C(OCC(C)=O)C=CC=C1"
+  },
+  {
+    "catalyst_nr": 39,
+    "catalyst_name": "ru39",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=C(OC(C)C(C)=O)C=CC=C1"
+  },
+  {
+    "catalyst_nr": 40,
+    "catalyst_name": "ru40",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CC(COC(C3=C(F)C(F)=C(F)C(F)=C3F)=O)N(C4=C(C)C=C(C)C=C4C)C2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 41,
+    "catalyst_name": "ru41",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C=C(N(C)C)N(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": ""
+  },
+  {
+    "catalyst_nr": 42,
+    "catalyst_name": "ru42",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C(N(C)C)=C(N(C)C)N(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": ""
+  },
+  {
+    "catalyst_nr": 43,
+    "catalyst_name": "ru43",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C=C(N(C)C)N(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 44,
+    "catalyst_name": "ru44",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C(N(C)C)=C(N(C)C)N(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 45,
+    "catalyst_name": "ru45",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C(C)=C(CN(C)C)N(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 46,
+    "catalyst_name": "ru46",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C(C)=C(CN(C)C)N(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=C(OC(C)C)C=CC(C)=C1"
+  },
+  {
+    "catalyst_nr": 47,
+    "catalyst_name": "ru47",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C(C)=C(CN(C)C)N(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=C(OC(C)C)C=CC(OC)=C1"
+  },
+  {
+    "catalyst_nr": 48,
+    "catalyst_name": "ru48",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C(C)=C(CN(C)C)N(C3=C(C)C=C(C)C=C3C)C2",
+    "alkylidene_data": "CC1=CC([N+]([O-])=O)=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 49,
+    "catalyst_name": "ru49",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C3C(C(C(C=CC=C4)=C4C3=O)=O)N(C5=C(C)C=C(C)C=C5C)C2",
+    "alkylidene_data": ""
+  },
+  {
+    "catalyst_nr": 50,
+    "catalyst_name": "ru50",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C3C(C(C(C=CC=C4)=C4C3=O)=O)N(C5=C(C)C=C(C)C=C5C)C2",
+    "alkylidene_data": "C1(C(C2=CC=CC=C2)=CC3)=C3C=CC=C1"
+  },
+  {
+    "catalyst_nr": 51,
+    "catalyst_name": "ru51",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2C3C(C(C(C=CC=C4)=C4C3=O)=O)N(C5=C(C)C=C(C)C=C5C)C2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 52,
+    "catalyst_name": "ru52",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "N1(C2=CC=CC=C2CCCCCCCCC3=C4C=CC=C3)CCN4C1",
+    "alkylidene_data": ""
+  },
+  {
+    "catalyst_nr": 54,
+    "catalyst_name": "ru54",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "N1(C2=CC=CC=C2CCCCCCCCC3=C4C=CC=C3)CCN4C1",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 55,
+    "catalyst_name": "ru55",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CN(CC3=CC=CC=C3)CC2",
+    "alkylidene_data": "C1(C(C2=CC=CC=C2)=CC3)=C3C=CC=C1"
+  },
+  {
+    "catalyst_nr": 56,
+    "catalyst_name": "ru56",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CN(CC3=CC=CC=C3OC)CC2",
+    "alkylidene_data": "C1(C(C2=CC=CC=C2)=CC3)=C3C=CC=C1"
+  },
+  {
+    "catalyst_nr": 57,
+    "catalyst_name": "ru57",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CN(CC3=CC=CC=C3N(C)C)CC2",
+    "alkylidene_data": "C1(C(C2=CC=CC=C2)=CC3)=C3C=CC=C1"
+  },
+  {
+    "catalyst_nr": 58,
+    "catalyst_name": "ru58",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CN(CC3=CC=CC=C3)CC2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 59,
+    "catalyst_name": "ru59",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CN(CC3=CC=CC=C3OC)CC2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 60,
+    "catalyst_name": "ru60",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CN(CC3=CC=CC=C3N(C)C)CC2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 61,
+    "catalyst_name": "ru61",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "N1(CC2=CC=CC=C2)CCN(C3=C(C=CC=C4)C4=C(C=CC=C5)C5=C3C6=CC=CC=C6)C1",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 62,
+    "catalyst_name": "ru62",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CN(CC3=CC=CS3)CC2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 63,
+    "catalyst_name": "ru63",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C)C1=CC=CC(C(C)C)=C1N2CN(CC3=CC=CS3)CC2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 64,
+    "catalyst_name": "ru64",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 0,
+    "NHC_data": "CC(C)C1=CC=CC(C(C)C)=C1N2CN(CC3=CC=CS3)CC2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  },
+  {
+    "catalyst_nr": 65,
+    "catalyst_name": "ru65",
+    "is_phosphine": 0,
+    "chloride_or_iodide": 0,
+    "NHC_data": "CC(C)C1=CC=CC(C(C)C)=C1N2CN(CC3=CC=CN3C4=CC=CC=C4)CC2",
+    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+  }
+]

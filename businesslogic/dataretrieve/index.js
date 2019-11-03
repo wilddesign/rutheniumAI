@@ -3,12 +3,12 @@
 const FS_PROMISES = require('fs').promises;
 
 
-async function loadJson(file) {
+async function loadJson(filename) {
   //load configurations file and returns it
-    let fileHandle = await FS_PROMISES.open(file);
+    let fileHandle = await FS_PROMISES.open(filename);
     let json = await fileHandle.readFile();
-    let jsonParsed = JSON.parse(await json);
-    return await jsonParsed;
+    let configs = await JSON.parse(json);
+    return configs;
 };
 
 

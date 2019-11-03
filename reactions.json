@@ -1,0 +1,522 @@
+[
+  {
+    "reaction_nr": 1,
+    "catalyst": "ru1",
+    "conversion": 0.57,
+    "yield1": 0.25,
+    "yield2": 0.32,
+    "selectivity": 0.93
+  },
+  {
+    "reaction_nr": 2,
+    "catalyst": "ru2",
+    "conversion": 0.67,
+    "yield1": 0.44,
+    "yield2": 0.51,
+    "selectivity": 0.93
+  },
+  {
+    "reaction_nr": 3,
+    "catalyst": "ru3",
+    "conversion": 0.52,
+    "yield1": 0.43,
+    "yield2": 0.48,
+    "selectivity": 0.98
+  },
+  {
+    "reaction_nr": 4,
+    "catalyst": "ru4",
+    "conversion": 0.65,
+    "yield1": 0.31,
+    "yield2": 0.38,
+    "selectivity": 0.9
+  },
+  {
+    "reaction_nr": 5,
+    "catalyst": "ru5",
+    "conversion": 0.71,
+    "yield1": 0.2,
+    "yield2": 0.25,
+    "selectivity": 0.43
+  },
+  {
+    "reaction_nr": 6,
+    "catalyst": "ru6",
+    "conversion": 0.77,
+    "yield1": 0.41,
+    "yield2": 0.55,
+    "selectivity": 0.76
+  },
+  {
+    "reaction_nr": 7,
+    "catalyst": "ru7",
+    "conversion": 0.56,
+    "yield1": 0.01,
+    "yield2": 0.02,
+    "selectivity": 0.03
+  },
+  {
+    "reaction_nr": 8,
+    "catalyst": "ru8",
+    "conversion": 0.38,
+    "yield1": 0.17,
+    "yield2": 0.22,
+    "selectivity": 0.4
+  },
+  {
+    "reaction_nr": 9,
+    "catalyst": "ru9",
+    "conversion": 0.79,
+    "yield1": 0.47,
+    "yield2": 0.58,
+    "selectivity": 0.7
+  },
+  {
+    "reaction_nr": 10,
+    "catalyst": "ru10",
+    "conversion": 0.59,
+    "yield1": 0.31,
+    "yield2": 0.43,
+    "selectivity": 0.73
+  },
+  {
+    "reaction_nr": 11,
+    "catalyst": "ru11",
+    "conversion": 0.53,
+    "yield1": 0.09,
+    "yield2": 0.11,
+    "selectivity": 0.17
+  },
+  {
+    "reaction_nr": 12,
+    "catalyst": "ru12",
+    "conversion": 0.56,
+    "yield1": 0.08,
+    "yield2": 0.09,
+    "selectivity": 0.15
+  },
+  {
+    "reaction_nr": 13,
+    "catalyst": "ru13",
+    "conversion": 0.8,
+    "yield1": 0.51,
+    "yield2": 0.57,
+    "selectivity": 0.72
+  },
+  {
+    "reaction_nr": 14,
+    "catalyst": "ru14",
+    "conversion": 0.74,
+    "yield1": 0.35,
+    "yield2": 0.45,
+    "selectivity": 0.78
+  },
+  {
+    "reaction_nr": 15,
+    "catalyst": "ru15",
+    "conversion": 0.77,
+    "yield1": 0.41,
+    "yield2": 0.47,
+    "selectivity": 0.66
+  },
+  {
+    "reaction_nr": 16,
+    "catalyst": "ru16",
+    "conversion": 0.84,
+    "yield1": 0.62,
+    "yield2": 0.74,
+    "selectivity": 0.83
+  },
+  {
+    "reaction_nr": 17,
+    "catalyst": "ru17",
+    "conversion": 0.7,
+    "yield1": 0.46,
+    "yield2": 0.6,
+    "selectivity": 0.89
+  },
+  {
+    "reaction_nr": 18,
+    "catalyst": "ru18",
+    "conversion": 0.84,
+    "yield1": 0.62,
+    "yield2": 0.74,
+    "selectivity": 0.83
+  },
+  {
+    "reaction_nr": 19,
+    "catalyst": "ru19",
+    "conversion": 0.42,
+    "yield1": 0.39,
+    "yield2": 0.42,
+    "selectivity": 0.99
+  },
+  {
+    "reaction_nr": 20,
+    "catalyst": "ru20",
+    "conversion": 0.72,
+    "yield1": 0.47,
+    "yield2": 0.56,
+    "selectivity": 0.88
+  },
+  {
+    "reaction_nr": 21,
+    "catalyst": "ru21",
+    "conversion": 0.57,
+    "yield1": 0.12,
+    "yield2": 0.14,
+    "selectivity": 0.26
+  },
+  {
+    "reaction_nr": 22,
+    "catalyst": "ru22",
+    "conversion": 0.59,
+    "yield1": 0.1,
+    "yield2": 0.12,
+    "selectivity": 0.21
+  },
+  {
+    "reaction_nr": 23,
+    "catalyst": "ru23",
+    "conversion": 0.81,
+    "yield1": 0.1,
+    "yield2": 0.19,
+    "selectivity": 0.43
+  },
+  {
+    "reaction_nr": 24,
+    "catalyst": "ru24",
+    "conversion": 0.82,
+    "yield1": 0.36,
+    "yield2": 0.45,
+    "selectivity": 0.69
+  },
+  {
+    "reaction_nr": 25,
+    "catalyst": "ru25",
+    "conversion": 0.74,
+    "yield1": 0.29,
+    "yield2": 0.35,
+    "selectivity": 0.54
+  },
+  {
+    "reaction_nr": 26,
+    "catalyst": "ru26",
+    "conversion": 0.17,
+    "yield1": 0.02,
+    "yield2": 0.02,
+    "selectivity": 0.22
+  },
+  {
+    "reaction_nr": 27,
+    "catalyst": "ru27",
+    "conversion": 0.39,
+    "yield1": 0.13,
+    "yield2": 0.16,
+    "selectivity": 0.38
+  },
+  {
+    "reaction_nr": 28,
+    "catalyst": "ru28",
+    "conversion": 0.54,
+    "yield1": 0.02,
+    "yield2": 0.02,
+    "selectivity": 0.04
+  },
+  {
+    "reaction_nr": 29,
+    "catalyst": "ru29",
+    "conversion": 0.4,
+    "yield1": 0.06,
+    "yield2": 0.07,
+    "selectivity": 0.23
+  },
+  {
+    "reaction_nr": 30,
+    "catalyst": "ru30",
+    "conversion": 0.81,
+    "yield1": 0.14,
+    "yield2": 0.24,
+    "selectivity": 0.49
+  },
+  {
+    "reaction_nr": 31,
+    "catalyst": "ru31",
+    "conversion": 0.6,
+    "yield1": 0.14,
+    "yield2": 0.15,
+    "selectivity": 0.28
+  },
+  {
+    "reaction_nr": 32,
+    "catalyst": "ru32",
+    "conversion": 0.48,
+    "yield1": 0.05,
+    "yield2": 0.06,
+    "selectivity": 0.13
+  },
+  {
+    "reaction_nr": 33,
+    "catalyst": "ru33",
+    "conversion": 0.58,
+    "yield1": 0.17,
+    "yield2": 0.2,
+    "selectivity": 0.32
+  },
+  {
+    "reaction_nr": 34,
+    "catalyst": "ru34",
+    "conversion": 0.64,
+    "yield1": 0.16,
+    "yield2": 0.19,
+    "selectivity": 0.33
+  },
+  {
+    "reaction_nr": 35,
+    "catalyst": "ru35",
+    "conversion": 0.38,
+    "yield1": 0.05,
+    "yield2": 0.05,
+    "selectivity": 0.17
+  },
+  {
+    "reaction_nr": 36,
+    "catalyst": "ru36",
+    "conversion": 0.7,
+    "yield1": 0.23,
+    "yield2": 0.27,
+    "selectivity": 0.45
+  },
+  {
+    "reaction_nr": 37,
+    "catalyst": "ru37",
+    "conversion": 0.54,
+    "yield1": 0.04,
+    "yield2": 0.05,
+    "selectivity": 0.08
+  },
+  {
+    "reaction_nr": 38,
+    "catalyst": "ru38",
+    "conversion": 0.23,
+    "yield1": 0.18,
+    "yield2": 0.21,
+    "selectivity": 0.8
+  },
+  {
+    "reaction_nr": 39,
+    "catalyst": "ru39",
+    "conversion": 0.57,
+    "yield1": 0.05,
+    "yield2": 0.06,
+    "selectivity": 0.12
+  },
+  {
+    "reaction_nr": 40,
+    "catalyst": "ru40",
+    "conversion": 0.62,
+    "yield1": 0.16,
+    "yield2": 0.18,
+    "selectivity": 0.3
+  },
+  {
+    "reaction_nr": 41,
+    "catalyst": "ru41",
+    "conversion": 0.64,
+    "yield1": 0.15,
+    "yield2": 0.18,
+    "selectivity": 0.31
+  },
+  {
+    "reaction_nr": 42,
+    "catalyst": "ru42",
+    "conversion": 0.66,
+    "yield1": 0.19,
+    "yield2": 0.24,
+    "selectivity": 0.38
+  },
+  {
+    "reaction_nr": 43,
+    "catalyst": "ru43",
+    "conversion": 0.59,
+    "yield1": 0.09,
+    "yield2": 0.11,
+    "selectivity": 0.22
+  },
+  {
+    "reaction_nr": 44,
+    "catalyst": "ru44",
+    "conversion": 0.59,
+    "yield1": 0.14,
+    "yield2": 0.18,
+    "selectivity": 0.29
+  },
+  {
+    "reaction_nr": 45,
+    "catalyst": "ru45",
+    "conversion": 0.63,
+    "yield1": 0.06,
+    "yield2": 0.07,
+    "selectivity": 0.14
+  },
+  {
+    "reaction_nr": 46,
+    "catalyst": "ru46",
+    "conversion": 0.59,
+    "yield1": 0.06,
+    "yield2": 0.07,
+    "selectivity": 0.13
+  },
+  {
+    "reaction_nr": 47,
+    "catalyst": "ru47",
+    "conversion": 0.55,
+    "yield1": 0.04,
+    "yield2": 0.05,
+    "selectivity": 0.1
+  },
+  {
+    "reaction_nr": 48,
+    "catalyst": "ru48",
+    "conversion": 0.55,
+    "yield1": 0.02,
+    "yield2": 0.03,
+    "selectivity": 0.05
+  },
+  {
+    "reaction_nr": 49,
+    "catalyst": "ru49",
+    "conversion": 0.55,
+    "yield1": 0.06,
+    "yield2": 0.08,
+    "selectivity": 0.17
+  },
+  {
+    "reaction_nr": 50,
+    "catalyst": "ru50",
+    "conversion": 0.54,
+    "yield1": 0.08,
+    "yield2": 0.06,
+    "selectivity": 0.15
+  },
+  {
+    "reaction_nr": 51,
+    "catalyst": "ru51",
+    "conversion": 0.62,
+    "yield1": 0.07,
+    "yield2": 0.09,
+    "selectivity": 0.19
+  },
+  {
+    "reaction_nr": 52,
+    "catalyst": "ru52",
+    "conversion": 0.55,
+    "yield1": 0.1,
+    "yield2": 0.13,
+    "selectivity": 0.21
+  },
+  {
+    "reaction_nr": 53,
+    "catalyst": "ru53",
+    "conversion": 0.53,
+    "yield1": 0.08,
+    "yield2": 0.03,
+    "selectivity": 0.14
+  },
+  {
+    "reaction_nr": 54,
+    "catalyst": "ru54",
+    "conversion": 0.72,
+    "yield1": 0.3,
+    "yield2": 0.37,
+    "selectivity": 0.55
+  },
+  {
+    "reaction_nr": 55,
+    "catalyst": "ru55",
+    "conversion": 0.82,
+    "yield1": 0.65,
+    "yield2": 0.74,
+    "selectivity": 0.72
+  },
+  {
+    "reaction_nr": 56,
+    "catalyst": "ru56",
+    "conversion": 0.81,
+    "yield1": 0.62,
+    "yield2": 0.71,
+    "selectivity": 0.8
+  },
+  {
+    "reaction_nr": 57,
+    "catalyst": "ru57",
+    "conversion": 0.7,
+    "yield1": 0.42,
+    "yield2": 0.5,
+    "selectivity": 0.64
+  },
+  {
+    "reaction_nr": 58,
+    "catalyst": "ru58",
+    "conversion": 0.68,
+    "yield1": 0.36,
+    "yield2": 0.43,
+    "selectivity": 0.75
+  },
+  {
+    "reaction_nr": 59,
+    "catalyst": "ru59",
+    "conversion": 0.61,
+    "yield1": 0.37,
+    "yield2": 0.43,
+    "selectivity": 0.71
+  },
+  {
+    "reaction_nr": 60,
+    "catalyst": "ru60",
+    "conversion": 0.61,
+    "yield1": 0.31,
+    "yield2": 0.38,
+    "selectivity": 0.67
+  },
+  {
+    "reaction_nr": 61,
+    "catalyst": "ru61",
+    "conversion": 0.77,
+    "yield1": 0.56,
+    "yield2": 0.72,
+    "selectivity": 0.89
+  },
+  {
+    "reaction_nr": 62,
+    "catalyst": "ru62",
+    "conversion": 0.39,
+    "yield1": 0.23,
+    "yield2": 0.28,
+    "selectivity": 0.78
+  },
+  {
+    "reaction_nr": 63,
+    "catalyst": "ru63",
+    "conversion": 0.7,
+    "yield1": 0.6,
+    "yield2": 0.69,
+    "selectivity": 0.9
+  },
+  {
+    "reaction_nr": 64,
+    "catalyst": "ru64",
+    "conversion": 0.42,
+    "yield1": 0.39,
+    "yield2": 0.34,
+    "selectivity": 0.99
+  },
+  {
+    "reaction_nr": 65,
+    "catalyst": "ru65",
+    "conversion": 0.17,
+    "yield1": 0.11,
+    "yield2": 0.14,
+    "selectivity": 0.91
+  }
+]

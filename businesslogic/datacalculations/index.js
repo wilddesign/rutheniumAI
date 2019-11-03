@@ -31,7 +31,7 @@ function calculateIndices(indices, moleculeInputSmiles){
         randicIndex: randicIndex
       }
   }
-  
+
   return indicesObject;
 };
 
