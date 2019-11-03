@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/wilddesign/ru20#readme",
   "dependencies": {
-    "@tensorflow/tfjs": "^1.3.1",
     "molecules.js": "github:chemplexity/molecules",
-    "papaparse": "^5.1.0"
+    "papaparse": "^5.1.0",
+    "synaptic": "^1.1.4"
   }
 }

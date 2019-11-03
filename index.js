@@ -15,5 +15,5 @@ const BUSINESS_LOGIC_SERVICE = require('./businesslogic/index.js');
   //train the neural network and test it with new catalysts given in the configurations file
   //  let output = trainNeuralNetwork(await neuralNetworkInput);
   //return the results
-    console.log(await output);
+  //  console.log(await output);
 })();

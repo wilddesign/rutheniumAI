@@ -1,0 +1,11 @@
+//testing an arbitrary SIPr at the top, phosphine at the bottom catalyst
+[
+  {
+    "catalyst_nr": 1,
+    "catalyst_name": "",
+    "is_phosphine": 1,
+    "chloride_or_iodide": 1,
+    "NHC_data": "CC(C)C(C=CC=C1C(C)C)=C1N2CCN(C3=C(C(C)C)C=CC=C3C(C)C)C2",
+    "alkylidene_data": ""
+  }
+]

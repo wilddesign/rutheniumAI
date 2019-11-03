@@ -10,8 +10,9 @@
 		"calculations_configs": {
 			"indices":"all_topological"
 		},
-		"output_configs": {
-			"output_file":"output.csv"
+		"prediction_configs": {
+			"input_file":"input.json",
+			"output_file":"output.json"
 		}
 	}
 }
