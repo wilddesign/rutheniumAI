@@ -88,6 +88,20 @@ function buildTrainingDataForSynaptic(input){
   return outputTensor;
 }
 
+function buildTestingDataForSynaptic(input){
+  let outputTensor = [];
+  input.catalysts.forEach(function(catalyst){
+  //use this as input to result array
+      // input is catalyst topological indices coverted to arrays and concatenated
+      let catalystInput = formatSpecificBuildInputForSynaptic(catalyst);
+      let tensorEntry = {
+        input: catalystInput,
+      };
+      outputTensor.push(tensorEntry);
+  });
+  return outputTensor;
+}
+
 
 async function main(configs){
   //load data, calculate indices, build model, train, test
@@ -101,6 +115,14 @@ async function main(configs){
 
   // once the neural network is trained, it is high time to perform simulations or testing with a prediction set
   let predictionSet = await loadPredictionData(configs.prediction_configs);
+  let predictionSetWithCalculatedIndices = calculateIndicesForCatalysts(await predictionSet, configs.calculations_configs);
+  let predictionSetReadyForSynaptic = buildTestingDataForSynaptic(await predictionSetWithCalculatedIndices);
+  let results = simplePerceptron.activate(await predictionSetReadyForSynaptic[0].input);
+  console.log('Predicted results for a catalyst: ');
+  console.log('Predicted conversion: ' + await results[0].toFixed(2));
+  console.log('Predicted yield1: ' + await results[1].toFixed(2));
+  console.log('Predicted yield2: ' + await results[2].toFixed(2));
+  console.log('Predicted selectivity: ' + await results[3].toFixed(2));
 
 }
 
