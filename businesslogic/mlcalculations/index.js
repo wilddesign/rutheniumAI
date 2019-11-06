@@ -4,11 +4,12 @@ const SYNAPTIC = require('synaptic');
 function simpleTrainer(network, trainingSet){
   let trainer = new SYNAPTIC.Trainer(network);
   trainer.train(trainingSet, {
-    rate: 0.1,
-    iterations: 50,
+    rate: 0.005,
+    iterations: 50000,
     error: 0.005,
     shuffle: false,
-    log: 10
+    log: 1000,
+    schedule: {}
   });
   return network;
 }

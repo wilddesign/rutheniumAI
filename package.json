@@ -24,7 +24,6 @@
   "homepage": "https://github.com/wilddesign/ru20#readme",
   "dependencies": {
     "molecules.js": "github:chemplexity/molecules",
-    "papaparse": "^5.1.0",
     "synaptic": "^1.1.4"
   }
 }

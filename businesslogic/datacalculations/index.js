@@ -16,11 +16,11 @@ function calculateIndices(indices, moleculeInputSmiles){
       let randicMatrix = MOLECULES.topology.matrix.randic(adjacencyMatrix, degreeMatrix);
 
       // calculate indices
-      let wienerIndex = MOLECULES.topology.index.wiener(distanceMatrix);
-      let hyperWienerIndex = MOLECULES.topology.index.hyperwiener(distanceMatrix);
-      let hararyIndex = MOLECULES.topology.index.harary(reciprocalMatrix);
-      let balabanIndex = MOLECULES.topology.index.balaban(distanceMatrix);
-      let randicIndex = MOLECULES.topology.index.randic(randicMatrix);
+      let wienerIndex = MOLECULES.topology.index.wiener(distanceMatrix)/10000;
+      let hyperWienerIndex = MOLECULES.topology.index.hyperwiener(distanceMatrix)/10000;
+      let hararyIndex = MOLECULES.topology.index.harary(reciprocalMatrix)/10000;
+      let balabanIndex = MOLECULES.topology.index.balaban(distanceMatrix)/10000;
+      let randicIndex = MOLECULES.topology.index.randic(randicMatrix)/10000;
 
       //insert into the object
       indicesObject = {
@@ -30,6 +30,16 @@ function calculateIndices(indices, moleculeInputSmiles){
         balabanIndex: balabanIndex,
         randicIndex: randicIndex
       }
+  }
+
+  if (!moleculeInputSmiles){
+    indicesObject = {
+      wienerIndex: 1,
+      hyperWienerIndex: 1,
+      hararyIndex: 1,
+      balabanIndex: 1,
+      randicIndex: 1
+    }
   }
 
   return indicesObject;

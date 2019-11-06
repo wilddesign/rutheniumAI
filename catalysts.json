@@ -23,14 +23,7 @@
     "NHC_data": "",
     "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
   },
-  {
-    "catalyst_nr": 5,
-    "catalyst_name": "ru5",
-    "is_phosphine": 0,
-    "chloride_or_iodide": 1,
-    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
-    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
-  },
+  
   {
     "catalyst_nr": 6,
     "catalyst_name": "ru6",

@@ -41,7 +41,8 @@ function calculateIndicesForCatalysts(data, configs){
   {
     catalyst.NHC_data = CHEM_CALC_SERVICE.calculateIndices(configs.indices, catalyst.NHC_data);
     catalyst.alkylidene_data = CHEM_CALC_SERVICE.calculateIndices(configs.indices, catalyst.alkylidene_data);
-  });
+  }
+);
 
   return data;
 }
@@ -73,7 +74,6 @@ function buildTrainingDataForSynaptic(input){
 
         // input is catalyst topological indices coverted to arrays and concatenated
         let catalystInput = formatSpecificBuildInputForSynaptic(catalyst);
-        //console.log(catalystInput);
         // output is an array of reaction data save for identifiers
         let catalystOutput = [reaction.conversion,reaction.yield1,reaction.yield2,reaction.selectivity];
 
@@ -99,7 +99,16 @@ function buildTestingDataForSynaptic(input){
       };
       outputTensor.push(tensorEntry);
   });
+
   return outputTensor;
+}
+
+function showResults(results){
+  console.log('Predicted results for a catalyst: ');
+  console.log('Predicted conversion: ' + results[0].toFixed(2));
+  console.log('Predicted yield1: ' + results[1].toFixed(2));
+  console.log('Predicted yield2: ' + results[2].toFixed(2));
+  console.log('Predicted selectivity: ' + results[3].toFixed(2));
 }
 
 
@@ -118,16 +127,11 @@ async function main(configs){
   let predictionSetWithCalculatedIndices = calculateIndicesForCatalysts(await predictionSet, configs.calculations_configs);
   let predictionSetReadyForSynaptic = buildTestingDataForSynaptic(await predictionSetWithCalculatedIndices);
   let results = simplePerceptron.activate(await predictionSetReadyForSynaptic[0].input);
-  console.log('Predicted results for a catalyst: ');
-  console.log('Predicted conversion: ' + await results[0].toFixed(2));
-  console.log('Predicted yield1: ' + await results[1].toFixed(2));
-  console.log('Predicted yield2: ' + await results[2].toFixed(2));
-  console.log('Predicted selectivity: ' + await results[3].toFixed(2));
-
+  showResults(await results);
 }
 
 module.exports = {
 
-  main: main
+  simplePerceptronUsingCalculatedIndices: main
 
 }

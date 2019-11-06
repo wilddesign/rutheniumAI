@@ -7,5 +7,5 @@ const BUSINESS_LOGIC_SERVICE = require('./businesslogic/index.js');
   //load confugurations file for the program
     const CONFIGS = await FILE_LOADER.loadJson('config.json');
   //perform the business logic with the ml module and return the results
-    let output = BUSINESS_LOGIC_SERVICE.main(await CONFIGS.configs);
+    let output = BUSINESS_LOGIC_SERVICE.simplePerceptronUsingCalculatedIndices(await CONFIGS.configs);
 })();
