@@ -112,7 +112,7 @@ function showResults(results){
 }
 
 
-async function main(configs){
+async function demoPerceptron(configs){
   //load data, calculate indices, build model, train, test
   let trainingData = await loadTrainingData(configs);
   let dataWithCalculatedIndices = calculateIndicesForCatalysts(await trainingData, configs.calculations_configs);
@@ -130,8 +130,18 @@ async function main(configs){
   showResults(await results);
 }
 
+async function autoMode(configs){
+  // take the training dataset
+  let trainingData = await loadTrainingData(configs);
+  // create training data in aproppriate format and use autooptimizing neural network to learn qsar using them
+
+// when dataset is ready, use it for ML
+//  ML_SERVICE.autoModeCreateOptimizedPerceptron(await trainingData);
+}
+
 module.exports = {
 
-  simplePerceptronUsingCalculatedIndices: main
+  simplePerceptronUsingCalculatedIndices: demoPerceptron,
+  autoMode: autoMode
 
 }
