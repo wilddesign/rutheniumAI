@@ -1,7 +1,7 @@
 
 const MOLECULES = require('molecules.js');
 
-function calculateIndices(indices, moleculeInputSmiles){
+function calculateIndices(indices, moleculeInputSmiles, objectNamePrefix){
   let indicesObject = {};
 
   if (indices == 'all_topological' && moleculeInputSmiles){
@@ -23,23 +23,19 @@ function calculateIndices(indices, moleculeInputSmiles){
       let randicIndex = MOLECULES.topology.index.randic(randicMatrix)/10000;
 
       //insert into the object
-      indicesObject = {
-        wienerIndex: wienerIndex,
-        hyperWienerIndex: hyperWienerIndex,
-        hararyIndex: hararyIndex,
-        balabanIndex: balabanIndex,
-        randicIndex: randicIndex
-      }
+      indicesObject[objectNamePrefix+'wienerIndex'] = wienerIndex;
+  //    indicesObject[objectNamePrefix+'hyperWienerIndex'] = hyperWienerIndex;
+  //    indicesObject[objectNamePrefix+'hararyIndex'] = hararyIndex;
+  //    indicesObject[objectNamePrefix+'balabanIndex'] = balabanIndex;
+  //    indicesObject[objectNamePrefix+'randicIndex'] = randicIndex;
   }
 
   if (!moleculeInputSmiles){
-    indicesObject = {
-      wienerIndex: 1,
-      hyperWienerIndex: 1,
-      hararyIndex: 1,
-      balabanIndex: 1,
-      randicIndex: 1
-    }
+    indicesObject[objectNamePrefix+'wienerIndex'] = 1;
+//    indicesObject[objectNamePrefix+'hyperWienerIndex'] = 1;
+//    indicesObject[objectNamePrefix+'hararyIndex'] = 1;
+//    indicesObject[objectNamePrefix+'balabanIndex'] = 1;
+//    indicesObject[objectNamePrefix+'randicIndex'] = 1;
   }
 
   return indicesObject;

@@ -1,0 +1,20 @@
+[
+  {
+    "catalyst_nr": 9,
+    "catalyst_name": "ru9",
+    "alkylidene_cnmr": 1,
+    "alkylidene_hnmr": 1,
+    "nhc_coordinating_carbon_cnmr": 1,
+    "NHC_substituent_1": "",
+    "NHC_substituent_1_is_phenyl_ring": 1,
+    "NHC_substituent_2": "",
+    "NHC_substituent_2_is_phenyl_ring": 1,
+    "NHC_substituent_12": "",
+    "NHC_substituent_12_is_phenyl_ring": 1,
+    "NHC_substituent_3": "",
+    "NHC_substituent_3_is_phenyl_ring": 1,
+    "NHC_substituent_4": "",
+    "NHC_substituent_3_is_phenyl_ring": 1,
+    "NHC_substituent_34_is_phenyl_ring": 1
+  }
+]
