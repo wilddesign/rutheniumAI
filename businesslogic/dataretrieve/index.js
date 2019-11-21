@@ -8,6 +8,8 @@ async function loadJson(filename) {
     let fileHandle = await FS_PROMISES.open(filename);
     let json = await fileHandle.readFile();
     let configs = await JSON.parse(json);
+    //close the file so that it is not left open and garbage collector does not return an error
+    await fileHandle.close();
     return configs;
 };
 

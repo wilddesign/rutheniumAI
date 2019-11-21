@@ -5,7 +5,7 @@ function simpleTrainer(network, trainingSet, rate){
   let trainer = new SYNAPTIC.Trainer(network);
   let currentError = 0;
   trainer.train(trainingSet, {
-    rate: rate || 0.05,
+    rate: rate? rate : 0.05,
     // max iterations
     iterations: 100000,
     error: 0.005,
@@ -40,6 +40,18 @@ function customTestPerceptron(perceptron, data){
 }
 
 function testNeuralNetworkWithNewDataPoints(network, newDataPoints){
+  //make predictions for each input in newDataPoints and compare them to the output
+  newDataPoints.forEach(function(dataPoint){
+    let networkArg = Object.values(dataPoint.input);
+    let calculatedResults = network.activate(networkArg);//console.log(networkArg ,network);
+    //now calculate variance of calculated vs real results
+    let variance = 0;
+    let len = calculatedResults.length;
+    for(j = 0; j<len;j++){
+      variance = variance + (calculatedResults[j]-dataPoint.output[j])^2
+    }console.log(calculatedResults);
+
+  })
 
 }
 
@@ -54,13 +66,9 @@ function divideDataSetIntoTrainingAndTestSet(data){
   for(i = 0; i<testLength; i++){
     let randomIndex = Math.floor(Math.random()*trainingSet.length);
     let newTestEntry = trainingSet.splice(randomIndex, 1);
-    testSet.push(newTestEntry);
+     testSet = testSet.concat(newTestEntry);
   }
 
-console.log({
-  trainingSet: trainingSet,
-  testSet: testSet
-});
   return {
     trainingSet: trainingSet,
     testSet: testSet
@@ -86,7 +94,7 @@ function autoModeCreateAndTestOptimizedPerceptron(data){
 
   // when perceptronsList is finished, test each perceptron to see, which is best
   let perceptronsTestResults = [];
-  perceptronsList.forEach(function(perceptron){
+  perceptronsList.forEach(function(perceptron){console.log(perceptron.layers.input.size+'--'+Object.keys(dividedData.trainingSet[0].input).length+'--'+Object.keys(dividedData.testSet[0].input).length);
     let testResult = testNeuralNetworkWithNewDataPoints(perceptron, dividedData.testSet);
     let perceptronsTestResult = {
       perceptron: perceptron,

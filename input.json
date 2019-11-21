@@ -1,10 +1,17 @@
 [
   {
-    "catalyst_nr": 5,
-    "catalyst_name": "",
-    "is_phosphine": 0,
-    "chloride_or_iodide": 1,
-    "NHC_data": "CC(C=C(C)C=C1C)=C1N2CCN(C3=C(C)C=C(C)C=C3C)C2",
-    "alkylidene_data": "CC1=CC=CC=C1OC(C)C"
+    "catalyst_nr": 26,
+    "catalyst_name": "ru26",
+    "alkylidene_cnmr": 0.295,
+    "alkylidene_hnmr": 0.1656,
+    "nhc_coordinating_carbon_cnmr": 0.265,
+    "NHC_substituent_1": "C",
+    "NHC_substituent_1_is_phenyl_ring": 0,
+    "NHC_substituent_2": "c2ccc1ccccc1c2",
+    "NHC_substituent_2_is_phenyl_ring": 1,
+    "NHC_substituent_12": "",
+    "NHC_substituent_12_is_phenyl_ring": 0,
+    "NHC_substituent_3": "CCC",
+    "NHC_substituent_4": "CCC"
   }
 ]

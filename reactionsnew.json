@@ -5,7 +5,7 @@
     "conversion": 0.37,
     "selectivity": 0.86,
     "yield": 0.32,
-    "ton": 110000
+    "ton": 0.110000
   },
   {
     "reaction_nr": 2,
@@ -13,7 +13,7 @@
     "conversion": 0.42,
     "selectivity": 0.88,
     "yield": 0.37,
-    "ton": 120000
+    "ton": 0.120000
   },
   {
     "reaction_nr": 3,
@@ -21,7 +21,7 @@
     "conversion": 0.59,
     "selectivity": 0.92,
     "yield": 0.54,
-    "ton": 180000
+    "ton": 0.180000
   },
   {
     "reaction_nr": 4,
@@ -29,7 +29,7 @@
     "conversion": 0.18,
     "selectivity": 0.94,
     "yield": 0.17,
-    "ton": 57000
+    "ton": 0.057000
   },
   {
     "reaction_nr": 5,
@@ -37,7 +37,7 @@
     "conversion": 0.19,
     "selectivity": 0.97,
     "yield": 0.18,
-    "ton": 60000
+    "ton": 0.060000
   },
   {
     "reaction_nr": 6,
@@ -45,7 +45,7 @@
     "conversion": 0.22,
     "selectivity": 0.63,
     "yield": 0.14,
-    "ton": 47000
+    "ton": 0.047000
   },
   {
     "reaction_nr": 7,
@@ -53,7 +53,7 @@
     "conversion": 0.26,
     "selectivity": 0.86,
     "yield": 0.22,
-    "ton": 73000
+    "ton": 0.73000
   },
   {
     "reaction_nr": 8,
@@ -61,7 +61,7 @@
     "conversion": 0.42,
     "selectivity": 0.92,
     "yield": 0.39,
-    "ton": 130000
+    "ton": 0.130000
   },
   {
     "reaction_nr": 9,
@@ -69,7 +69,7 @@
     "conversion": 0.19,
     "selectivity": 0.78,
     "yield": 0.14,
-    "ton": 47000
+    "ton": 0.047000
   },
   {
     "reaction_nr": 10,
@@ -77,7 +77,7 @@
     "conversion": 0.13,
     "selectivity": 0.97,
     "yield": 0.13,
-    "ton": 43000
+    "ton": 0.043000
   },
   {
     "reaction_nr": 11,
@@ -85,7 +85,7 @@
     "conversion": 0.16,
     "selectivity": 0.97,
     "yield": 0.15,
-    "ton": 50000
+    "ton": 0.050000
   },
   {
     "reaction_nr": 12,
@@ -93,7 +93,7 @@
     "conversion": 0,
     "selectivity": 0,
     "yield": 0,
-    "ton": 0
+    "ton": 0.00
   },
   {
     "reaction_nr": 13,
@@ -101,7 +101,7 @@
     "conversion": 0.41,
     "selectivity": 0.83,
     "yield": 0.34,
-    "ton": 110000
+    "ton": 0.110000
   },
   {
     "reaction_nr": 14,
@@ -109,7 +109,7 @@
     "conversion": 0.46,
     "selectivity": 0.85,
     "yield": 0.39,
-    "ton": 130000
+    "ton": 0.130000
   },
   {
     "reaction_nr": 15,
@@ -117,7 +117,7 @@
     "conversion": 0.48,
     "selectivity": 0.88,
     "yield": 0.43,
-    "ton": 140000
+    "ton": 0.140000
   },
   {
     "reaction_nr": 16,
@@ -125,7 +125,7 @@
     "conversion": 0.57,
     "selectivity": 0.94,
     "yield": 0.54,
-    "ton": 180000
+    "ton": 0.180000
   },
   {
     "reaction_nr": 17,
@@ -133,6 +133,6 @@
     "conversion": 0.47,
     "selectivity": 0.98,
     "yield": 0.46,
-    "ton": 150000
+    "ton": 0.150000
   }
 ]

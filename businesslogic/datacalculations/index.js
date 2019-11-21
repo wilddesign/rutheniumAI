@@ -7,7 +7,6 @@ function calculateIndices(indices, moleculeInputSmiles, objectNamePrefix){
   if (indices == 'all_topological' && moleculeInputSmiles){
 
       let molecule = MOLECULES.load.smiles(moleculeInputSmiles);
-
       // calculate matrices
       let adjacencyMatrix = MOLECULES.topology.matrix.adjacency(molecule);
       let distanceMatrix = MOLECULES.topology.matrix.distance(adjacencyMatrix);
@@ -31,7 +30,7 @@ function calculateIndices(indices, moleculeInputSmiles, objectNamePrefix){
   }
 
   if (!moleculeInputSmiles){
-    indicesObject[objectNamePrefix+'wienerIndex'] = 1;
+    indicesObject[objectNamePrefix+'wienerIndex'] = 0;
 //    indicesObject[objectNamePrefix+'hyperWienerIndex'] = 1;
 //    indicesObject[objectNamePrefix+'hararyIndex'] = 1;
 //    indicesObject[objectNamePrefix+'balabanIndex'] = 1;

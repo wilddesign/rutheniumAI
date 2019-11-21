@@ -39,11 +39,18 @@ async function loadPredictionData(configs){
 function preprocessData(data, configs){
   //perform calculations for the catalysts according to configs
   data.catalysts.forEach(function(catalyst){
-    let newNHCData = CHEM_CALC_SERVICE.calculateIndices(configs.indices, catalyst.NHC_data, 'nhc_');
-    delete catalyst.NHC_data;
-    let newAlkylideneData = CHEM_CALC_SERVICE.calculateIndices(configs.indices, catalyst.alkylidene_data, 'alkylidene_');
-    delete catalyst.alkylidene_data;
-    Object.assign(catalyst, newNHCData, newAlkylideneData);
+    let newNHC_substituent_1 = CHEM_CALC_SERVICE.calculateIndices(configs.indices, catalyst.NHC_substituent_1, 'NHC_substituent_1');
+    delete catalyst.NHC_substituent_1;
+    let newNHC_substituent_2 = CHEM_CALC_SERVICE.calculateIndices(configs.indices, catalyst.NHC_substituent_2, 'NHC_substituent_2');
+    delete catalyst.NHC_substituent_2;
+    let newNHC_substituent_12 = CHEM_CALC_SERVICE.calculateIndices(configs.indices, catalyst.NHC_substituent_12, 'NHC_substituent_12');
+    delete catalyst.NHC_substituent_12;
+    let newNHC_substituent_3 = CHEM_CALC_SERVICE.calculateIndices(configs.indices, catalyst.NHC_substituent_3, 'NHC_substituent_3');
+    delete catalyst.NHC_substituent_3;
+    let newNHC_substituent_4 = CHEM_CALC_SERVICE.calculateIndices(configs.indices, catalyst.NHC_substituent_4, 'NHC_substituent_4');
+    delete catalyst.NHC_substituent_4;
+
+    Object.assign(catalyst, newNHC_substituent_1, newNHC_substituent_2,newNHC_substituent_12,newNHC_substituent_3,newNHC_substituent_4);
   })
   return data;
 }
@@ -77,9 +84,9 @@ function buildTrainingDataForSynaptic(input){
         // input is catalyst topological indices coverted to arrays and concatenated
         delete catalyst['catalyst_nr'];
         delete catalyst['catalyst_name'];
-        let catalystInput = catalyst;
+        let catalystInput = Object.values(catalyst);
         // output is an array of reaction data save for identifiers
-        let catalystOutput = [reaction.conversion,reaction.yield,reaction.selectivity];
+        let catalystOutput = [reaction.conversion,reaction.yield,reaction.selectivity, reaction.ton];
 
         let tensorEntry = {
           input: catalystInput,
@@ -97,29 +104,30 @@ function buildTestingDataForSynaptic(input){
   input.catalysts.forEach(function(catalyst){
   //use this as input to result array
       // input is catalyst topological indices coverted to arrays and concatenated
-      let catalystInput = formatSpecificBuildInputForSynaptic(catalyst);
+      let catalystValues = Object.values(catalyst);
+      catalystValues.splice(0,2);
+
       let tensorEntry = {
-        input: catalystInput,
+        input: catalystValues,
       };
       outputTensor.push(tensorEntry);
   });
-
   return outputTensor;
 }
 
 function showResults(results){
   console.log('Predicted results for a catalyst: ');
-  console.log('Predicted conversion: ' + results[0].toFixed(2));
-  console.log('Predicted yield1: ' + results[1].toFixed(2));
-  console.log('Predicted yield2: ' + results[2].toFixed(2));
-  console.log('Predicted selectivity: ' + results[3].toFixed(2));
+  console.log('Predicted conversion: ' + (100*results[0]).toFixed(0));
+  console.log('Predicted yield: ' + (100*results[1]).toFixed(0));
+  console.log('Predicted selectivity: ' + (100*results[2]).toFixed(0));
+  console.log('Predicted TON: ' + 1000000*(results[3].toFixed(3)));
 }
 
 
 async function demoPerceptron(configs){
   //load data, calculate indices, build model, train, test
   let trainingData = await loadTrainingData(configs);
-  let dataWithCalculatedIndices = calculateIndicesForCatalysts(await trainingData, configs.calculations_configs);
+  let dataWithCalculatedIndices = preprocessData(await trainingData, configs.calculations_configs);
   let trainingSetReadyForSynaptic = buildTrainingDataForSynaptic(await dataWithCalculatedIndices);
 
   // ML
@@ -128,9 +136,11 @@ async function demoPerceptron(configs){
 
   // once the neural network is trained, it is high time to perform simulations or testing with a prediction set
   let predictionSet = await loadPredictionData(configs.prediction_configs);
-  let predictionSetWithCalculatedIndices = calculateIndicesForCatalysts(await predictionSet, configs.calculations_configs);
+  let predictionSetWithCalculatedIndices = preprocessData(await predictionSet, configs.calculations_configs);
   let predictionSetReadyForSynaptic = buildTestingDataForSynaptic(await predictionSetWithCalculatedIndices);
-  let results = simplePerceptron.activate(await predictionSetReadyForSynaptic[0].input);
+
+  let test = Object.values(await predictionSetReadyForSynaptic[0].input);
+  let results = simplePerceptron.activate(await test);
   showResults(await results);
 }
 
@@ -145,7 +155,7 @@ function createDescriptorsSets(data){
 
 function testAllDataForAllDescriptorsSets(dataset, descriptorsSets){
   let results = [];
-// for each descriptorsSet, filter the copy of the dataset and use the filtered dataset to create NN and test it. return statistical params for that nn
+  // for each descriptorsSet, filter the copy of the dataset and use the filtered dataset to create NN and test it. return statistical params for that nn
   descriptorsSets.forEach(function(descriptorsSet){
     let newResult = {
       descriptorsSet: descriptorsSet
@@ -157,7 +167,7 @@ function testAllDataForAllDescriptorsSets(dataset, descriptorsSets){
         delete entry.input[descriptor];
       });
     });
-//console.log(datasetCopy);
+
     // when filtered datasetCopy is created, use it to train and test a NN
     let neuralNetworkAndStats = ML_SERVICE.autoModeCreateAndTestOptimizedPerceptron(datasetCopy);
     newResult.neuralNetworkAndStats = neuralNetworkAndStats;
@@ -171,7 +181,7 @@ async function autoMode(configs){
   // take the training dataset
   let allAvailableData = await loadTrainingData(configs);
   // calculations of topological indices etc
-  let preprocessedData = preprocessData(await allAvailableData, configs);
+  let preprocessedData = preprocessData(await allAvailableData, configs.calculations_configs);
   // create training datasets in aproppriate format and use autooptimizing neural network to learn qsar using them
   let descriptorsSets = createDescriptorsSets(await allAvailableData);
   // create input -> output pairs from all available dataset
