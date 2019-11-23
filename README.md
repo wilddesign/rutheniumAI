@@ -12,7 +12,7 @@ d) the program should choose which descriptors provide best quantitative structu
 
 So, in summary, we need to apply several optimizations for the aspects of the program.
 
-Dataset has few elements (less than 20) -> Test set ~= training set ->prediction should be done , say 50 times, then averaged results should be provided together with stdev and confidence interval.
+Dataset has few elements (less than 20) -> Test set.length ~= training set.length ->prediction should be done , say 50 times, then averaged results should be provided together with stdev and confidence interval.
 
 Make the script being able to generate optimal catalyst structures.
 
