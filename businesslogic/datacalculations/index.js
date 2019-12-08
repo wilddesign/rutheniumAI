@@ -4,7 +4,7 @@ const MOLECULES = require('molecules.js');
 function calculateIndices(indices, moleculeInputSmiles, objectNamePrefix){
   let indicesObject = {};
 
-  if (indices == 'all_topological' && moleculeInputSmiles){
+  if (indices == 'wiener' && moleculeInputSmiles){
 
       let molecule = MOLECULES.load.smiles(moleculeInputSmiles);
       // calculate matrices

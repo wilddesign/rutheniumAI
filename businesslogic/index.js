@@ -1,9 +1,6 @@
 const FILE_LOADER = require('./dataretrieve/index.js');
 const CHEM_CALC_SERVICE = require('./datacalculations/index.js');
-const DATA_COMBINATORICS_SERVICE = require('./datacalculations/combinatorics.js');
 const ML_SERVICE = require('./mlcalculations/index.js');
-
-
 
 
 async function loadTrainingData(configs){
@@ -55,22 +52,6 @@ function preprocessData(data, configs){
   return data;
 }
 
-function buildInputForSynaptic(catalyst){
-
-/*  let catalystInputObject = {
-    isPhosphine: catalyst.is_phosphine,
-    chloride_or_iodide: catalyst.chloride_or_iodide,
-    NHC_data: catalyst.NHC_data,
-    alkylidene_data: catalyst.alkylidene_data
-  }
-
-  let buildArray1 = [catalystInputObject.isPhosphine, catalystInputObject.chloride_or_iodide];
-  let buildArray2 = Object.values(catalystInputObject.NHC_data);
-  let buildArray3 = Object.values(catalystInputObject.alkylidene_data);
-  return (buildArray1.concat(buildArray2)).concat(buildArray3); */
-  return catalyst;
-
-}
 
 function buildTrainingDataForSynaptic(input){
 
@@ -131,8 +112,7 @@ async function demoPerceptron(configs){
   let trainingSetReadyForSynaptic = buildTrainingDataForSynaptic(await dataWithCalculatedIndices);
 
   // ML
-  let simplePerceptron = ML_SERVICE.autoCreatePerceptron(await trainingSetReadyForSynaptic);
-  ML_SERVICE.simpleTrainer(await simplePerceptron, await trainingSetReadyForSynaptic);
+  let optimalPerceptron = ML_SERVICE.autoModeCreateAndTestOptimizedPerceptron(await trainingSetReadyForSynaptic);
 
   // once the neural network is trained, it is high time to perform simulations or testing with a prediction set
   let predictionSet = await loadPredictionData(configs.prediction_configs);
@@ -140,18 +120,10 @@ async function demoPerceptron(configs){
   let predictionSetReadyForSynaptic = buildTestingDataForSynaptic(await predictionSetWithCalculatedIndices);
 
   let test = Object.values(await predictionSetReadyForSynaptic[0].input);
-  let results = simplePerceptron.activate(await test);
+  let results = optimalPerceptron.activate(await test);
   showResults(await results);
 }
 
-function createDescriptorsSets(data){
-  //get a list of all possible descriptors, remove first two as the are only identifiers, not catalyst descriptors
-  let listOfAvailableDescriptors = Object.keys(data.catalysts[0]);
-  listOfAvailableDescriptors.splice(0,2);
-  //now generate a set comprising of all subsets of descriptors setOfAllSubsets
-  let allPossibleDescriptorsSets = DATA_COMBINATORICS_SERVICE.getAllSubsetsOfASet(listOfAvailableDescriptors);
-  return allPossibleDescriptorsSets;
-}
 
 function testAllDataForAllDescriptorsSets(dataset, descriptorsSets){
   let results = [];
@@ -177,33 +149,8 @@ function testAllDataForAllDescriptorsSets(dataset, descriptorsSets){
   return results;
 }
 
-async function autoMode(configs){
-  // take the training dataset
-  let allAvailableData = await loadTrainingData(configs);
-  // calculations of topological indices etc
-  let preprocessedData = preprocessData(await allAvailableData, configs.calculations_configs);
-  // create training datasets in aproppriate format and use autooptimizing neural network to learn qsar using them
-  let descriptorsSets = createDescriptorsSets(await allAvailableData);
-  // create input -> output pairs from all available dataset
-  let allDataBuiltForSynaptic = buildTrainingDataForSynaptic(await allAvailableData);
-  // now build input->outputs by removing named descriptors from input for each descriptorsSet
-  let descriptorsSetsStatisticalParameters = testAllDataForAllDescriptorsSets(allDataBuiltForSynaptic, descriptorsSets);
-  // output the descriptors set -> nn stats to console
-  //console.log(await descriptorsSetsStatisticalParameters);
-  //choose the best desriptorset that yields smallest error vs experimental data
-  //console.log(await allDataBuiltForSynaptic);
-  //console.log(await allDataBuiltForSynaptic);
-  // for each dataset create trained neural network and test it with a part of the provided dataset. return errors
-// for each dataset use it for ML
-//  ML_SERVICE.autoModeCreateOptimizedPerceptron(await trainingData);
-
-// for each dataset calculate meta characteristics, like error in test
-// choose the best dataset and perceptron, use it to calculate results
-}
-
 module.exports = {
 
-  simplePerceptronUsingCalculatedIndices: demoPerceptron,
-  autoMode: autoMode
+  simplePerceptronUsingCalculatedIndices: demoPerceptron
 
 }

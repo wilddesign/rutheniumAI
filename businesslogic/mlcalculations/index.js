@@ -35,30 +35,27 @@ function createPerceptronFittingToDataSize(data){
   }
 }
 
-function customTestPerceptron(perceptron, data){
-  console.log(perceptron, data);
-}
-
 function testNeuralNetworkWithNewDataPoints(network, newDataPoints){
   //make predictions for each input in newDataPoints and compare them to the output
+  let totalVariance = 0;
   newDataPoints.forEach(function(dataPoint){
-    let networkArg = Object.values(dataPoint.input);
-    let calculatedResults = network.activate(networkArg);//console.log(networkArg ,network);
+    let calculatedResults = network.activate(dataPoint.input);//console.log(networkArg ,network);
     //now calculate variance of calculated vs real results
     let variance = 0;
+    //calculate variance on all values
     let len = calculatedResults.length;
     for(j = 0; j<len;j++){
-      variance = variance + (calculatedResults[j]-dataPoint.output[j])^2
-    }console.log(calculatedResults);
-
+      variance = variance + (calculatedResults[j]-dataPoint.output[j])**2
+    }
+    totalVariance = totalVariance + variance;
   })
-
+  return totalVariance;
 }
 
 function divideDataSetIntoTrainingAndTestSet(data){
-  // randomly take 30% of data for testing
+  // randomly take 50% of data for testing
   let dataLength = data.length;
-  let testLength = Math.floor(0.3*dataLength);
+  let testLength = Math.floor(0.5*dataLength);
 
   let trainingSet = data;
   let testSet = [];
@@ -94,7 +91,7 @@ function autoModeCreateAndTestOptimizedPerceptron(data){
 
   // when perceptronsList is finished, test each perceptron to see, which is best
   let perceptronsTestResults = [];
-  perceptronsList.forEach(function(perceptron){console.log(perceptron.layers.input.size+'--'+Object.keys(dividedData.trainingSet[0].input).length+'--'+Object.keys(dividedData.testSet[0].input).length);
+  perceptronsList.forEach(function(perceptron){
     let testResult = testNeuralNetworkWithNewDataPoints(perceptron, dividedData.testSet);
     let perceptronsTestResult = {
       perceptron: perceptron,
@@ -103,9 +100,9 @@ function autoModeCreateAndTestOptimizedPerceptron(data){
     perceptronsTestResults.push(perceptronsTestResult);
   });
   // when it is ready, sort the perceptronResults by stats and return that one with lowest variance
-  perceptronsTestResults.sort(function(a,b){return b.testResult-a.testResult;});
-  //return the best optimized nn and its stats at prediction of testing set
-  return perceptronsTestResults[0];
+  perceptronsTestResults.sort(function(a,b){return a.stats-b.stats;});
+  //return the best optimized nn
+  return perceptronsTestResults[0].perceptron;
 }
 
 

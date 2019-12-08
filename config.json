@@ -8,7 +8,7 @@
 			"reactions_data_file":"reactionsnew.json"
 		},
 		"calculations_configs": {
-			"indices":"all_topological"
+			"indices":"wiener"
 		},
 		"prediction_configs": {
 			"input_file":"input.json",
