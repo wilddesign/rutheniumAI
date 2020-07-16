@@ -74,7 +74,7 @@ function divideDataSetIntoTrainingAndTestSet(data){
 
 function autoModeCreateAndTestOptimizedPerceptron(data){
   // return if improper arguments
-  if (Object.keys(data[0].input).length === 0 || Object.keys(data[0].output).length === 0) {return;}
+  if (Object.keys(data[0].input).length === 0 || Object.keys(data[0].output).length === 0) {console.log("Incomplete data error");return;}
   //divide the data into training set and test set
   let dividedData = divideDataSetIntoTrainingAndTestSet(data);
   //create perceptrons for a range of hardcoded learning rates
