@@ -39,7 +39,7 @@ function testNeuralNetworkWithNewDataPoints(network, newDataPoints){
   //make predictions for each input in newDataPoints and compare them to the output
   let totalVariance = 0;
   newDataPoints.forEach(function(dataPoint){
-    let calculatedResults = network.activate(dataPoint.input);//console.log(networkArg ,network);
+    let calculatedResults = network.activate(dataPoint.input);
     //now calculate variance of calculated vs real results
     let variance = 0;
     //calculate variance on all values
@@ -107,7 +107,5 @@ function autoModeCreateAndTestOptimizedPerceptron(data){
 
 
 module.exports = {
-  simpleTrainer: simpleTrainer,
-  autoCreatePerceptron: createPerceptronFittingToDataSize,
   autoModeCreateAndTestOptimizedPerceptron: autoModeCreateAndTestOptimizedPerceptron
 }

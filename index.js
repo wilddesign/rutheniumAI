@@ -8,7 +8,4 @@ const BUSINESS_LOGIC_SERVICE = require('./businesslogic/index.js');
     const CONFIGS = await FILE_LOADER.loadJson('config.json');
   //perform the business logic with the ml module and return the results
     BUSINESS_LOGIC_SERVICE.simplePerceptronUsingCalculatedIndices(await CONFIGS.configs);
-
-    //BUSINESS_LOGIC_SERVICE.autoMode(await CONFIGS.configs);
-
 })();
